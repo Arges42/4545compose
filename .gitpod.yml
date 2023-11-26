@@ -4,4 +4,4 @@ image:
 additionalRepositories:
     - url: https://github.com/Arges42/heltour
       # checkoutLocation is relative to /workspaces
-      checkoutLocation: heltour
+      checkoutLocation: 4545compose/heltour
