@@ -1,2 +1,7 @@
 image:
     file: .gitpod.Dockerfile
+
+additionalRepositories:
+    - url: https://github.com/Arges42/heltour
+      # checkoutLocation is relative to /workspaces
+      checkoutLocation: heltour
