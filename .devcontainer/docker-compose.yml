@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  heltour:
+    hostname: heltour_dev
+    build:
+      context: ..
+      dockerfile: .devcontainer/heltour.Dockerfile
+    volumes:
+      - ..:/home/vagrant/heltour
+    command: sleep infinity
+    user: vagrant
+    links:
+      - db
+      - redis
+  db:
+    image: postgres:12.16
+    restart: always
+    environment:
+      - POSTGRES_DB=heltour_lichess4545
+      - POSTGRES_USER=heltour_lichess4545
+      - POSTGRES_PASSWORD=sown shuts combiner chattels
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+  redis:
+    image: redis:7
+    restart: always
+    ports:
+      - '6379:6379'
+volumes:
+  db:
+    driver: local

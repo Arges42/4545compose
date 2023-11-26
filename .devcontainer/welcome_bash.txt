@@ -1,0 +1,4 @@
+If this is your first time run:
+- python manage.py migrate
+- python manage.py createsuperuser
+- fab runserver
